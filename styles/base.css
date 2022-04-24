@@ -7,6 +7,8 @@
   --blue600: #00245C;
   --blue500: #0041A5;
   --blue400: #71A5F4;
+  --displacement: 32px;
+  --displacement-correction: 48px;
 }
 
 body {
