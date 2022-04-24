@@ -1,0 +1,77 @@
+
+.menu__list {
+  padding: 32px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--white);
+  z-index: 10;
+  transition: .3s ease;
+  opacity: 0;
+  display: none;
+  animation: show-menu .3s ease-in-out forwards;
+}
+
+@keyframes show-menu {
+  to{
+    opacity: 1;
+  }
+}
+.menu__item{
+  text-align: center;
+}
+
+.menu__hambug {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 30px;
+  gap: 8px;
+  cursor: pointer;
+  z-index: 11;
+}
+
+.hambug__control {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+
+.control__line {
+  height: 4px;
+  width: 100%;
+  background-color: var(--white);
+  transition: 0.3s ease;
+}
+
+.hambug__control:checked ~ .menu__hambug .control__line{
+  background-color: var(--black);
+}
+
+.hambug__control:checked ~ .menu__hambug .line--middle {
+  opacity: 0;
+}
+
+.hambug__control:checked ~ .menu__hambug .line--upper {
+  transform: rotate(45deg) translate(10px, 10px);
+}
+.hambug__control:checked ~ .menu__hambug .line--down {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+
+.hambug__control:checked ~ .menu__list {
+  display: initial;
+  opacity: 1;
+}
+
+
+

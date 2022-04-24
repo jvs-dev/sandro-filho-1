@@ -1,0 +1,17 @@
+:root {
+  --white: #fff;
+  --black: #000;
+  --orange600: #993700;
+  --orange500: #FF5C00;
+  --orange400: #F0A175;
+  --blue600: #00245C;
+  --blue500: #0041A5;
+  --blue400: #71A5F4;
+}
+
+body {
+  width: 100vw;
+  max-height: 100vh;
+  font-family: Poppins, sans-serif;
+  overflow-y: auto;
+}
